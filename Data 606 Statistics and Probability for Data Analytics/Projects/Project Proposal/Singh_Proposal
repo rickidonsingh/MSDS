@@ -1,0 +1,92 @@
+---
+title: "Data606: Statistics and Probability for Data Analytics- Project Proposal"
+author: "RSingh"
+date: "4/8/2018"
+output:
+  html_document:
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+
+#### Reproducible Analysis Data Science Project
+
+
+After reading a recent article and watching a debate on the topic, I chose to look at the correlation between the pursuit of continuing higher education and salary of an individual. 
+
+Q1. Research Question:
+
+- What significance does higher education play in an individual's payscale?
+
+Q2. What are the cases, and how many are there? 
+
+- There are 188,767 cases in total. All cases were used in this data analysis project.
+
+Q3. Describe the method of data collection. 
+
+- The original data was obtained from the US Census Bureau.  
+
+Q4. What type of study is this (observational/experiment)?
+
+- Observational Study
+
+Q5. Data Source: If you collected the data, state self-collected. If not, provide a citation/link.
+
+- http://www.census.gov/programs-surveys/acs/data/pums.html (choose ACS 1-year PUMS ).
+
+Q6. Response: What is the response variable, and what type is it (numerical/categorical)?
+
+- Both “Total Personal Income” and “Total Personal Earnings” are the response variables and are numerical.
+
+Q7. Explanatory: What is the explanatory variable(s), and what type is it (numerical/categorical)?
+
+- The explanatory variables are "Worker Class" (categorical), "Sex" (categorical), "Citizenship Status" (categorical), "Age"(numerical  discrete), "Educational Attainment" (categorical), "School Attending" (categorical). 
+
+
+Let's begin by loading original csv file
+```{r}
+original_csv <- read.csv(file="csv_pny 2/ss09pny.csv", header=TRUE, sep=",")
+dim(original_csv)
+
+```
+
+Next, we will create a dataframe subset
+```{r}
+new_csv <- data.frame(original_csv[c("AGEP", "CIT", "COW", "SCHG", "SCHL", "SEX", "PERNP", "PINCP")])
+names(new_csv) <- c("Age", "Citizenship_Status", "Worker_Class",  "School_Attending", "Educational_Attainment", "SEX", "Total_Personal_Earnings", "Total_Personal_Income")
+```
+
+Let's see the dataframe
+```{r}
+head(new_csv, 2)
+```
+
+We can create a new csv file containing the chosen subset
+```{r}
+write.csv(new_csv, file = "/Users/s/Documents/MSDS/R Studio Projects/tutorial/Cuny S1/Data606/Project Proposal_data606/NY_Data.csv")
+```
+
+Load csv file
+```{r}
+NY_Data2 <- read.csv(file="https://raw.githubusercontent.com/rickidonsingh/MSDS/master/Data%20606%20Statistics%20and%20Probability%20for%20Data%20Analytics/Projects/Project%20Proposal/NY_Data.csv", header=TRUE, sep=",")
+
+```
+
+
+```{r}
+head(NY_Data2)
+```
+
+
+Q8.Relevant summary statistics
+
+```{r}
+summary(NY_Data2)
+```
+
+
+
+
+
+
