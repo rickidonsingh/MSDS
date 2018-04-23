@@ -1,0 +1,43 @@
+---
+title: "Data607 RecommenderSystems"
+author: "RSingh"
+date: "4/22/2018"
+output: 
+  html_document:
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## LinkedIn: People You May Know Feature
+
+
+Who are your target users?
+
+LinkedIn's 'People You May Know' feature offers great value to a variety of users. Anyone seeking a network connection:  employement seekers and recruiting agents. 
+
+What are their key goals?
+
+The recruiter can utilize this feature for sales opportunity and finding potential reputable clients through his/her common linkedin connection. The job seeker type of user can seek employment by seeking to connect with recruiters who are seeking clients in a specific domain. The job seeker can also connect with college alumni, other individuals who have worked in previous companies as he or she has and grow his or her network. Both users can also post and share content, links. 
+
+
+How can you help them accomplish those goals?
+
+Both the recruiter and job seeker can tackle their task using the People you may know feature as the mutual connections increases. LinkedIn will continue to make suggestions and its userbase can use it's specific recommendations. 
+
+Recommendations:  
+
+I have seen that this feature sometimes lists people at the very bottom who have a similar work background and location as me. Also, I have noticed users who I have gone to school with prior to starting college are not shown. I would certainly recommend that more intimate connections be given more weight so that users can make quicker and stronger connections to fulfill their goal while using Linkedin. 
+
+Sources: 
+https://www.linkedin.com/help/linkedin/answer/29/people-you-may-know-feature-overview?lang=en
+
+https://www.socialmarketingdiva.com/who-are-those-people-you-may-know-in-linkedins-suggested-connections/
+
+
+
